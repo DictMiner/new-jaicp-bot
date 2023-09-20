@@ -1,47 +1,36 @@
 {
   "project" : {
-    "id" : "test_os-1000105668-ELF",
-    "name" : "test_os-1000105668-ELF",
-    "folder" : "/platform"
+    "id" : "botforclass-249847117-XAl",
+    "name" : "botforclass-249847117-XAl",
+    "folder" : "/jaicp"
   },
   "settings" : {
     "language" : "ru",
     "spellingCorrection" : false,
     "classificationAlgorithm" : "sts",
-    "timezone" : "Europe/Moscow",
+    "timezone" : "UTC",
     "extendedSettings" : {
-      "tokenizerEngine" : "mystem",
       "useShared" : false
     },
-    "shared" : false,
-    "validation" : {
-      "phraseValidationEnabled" : true,
-      "answerValidationEnabled" : true,
-      "phraseValidationThreshold" : 0.5,
-      "answerValidationThreshold" : 0.8
-    }
+    "shared" : false
   },
   "intents" : [ {
+    "id" : 5290719,
     "path" : "/пока",
     "enabled" : true,
     "shared" : false,
     "phrases" : [ {
       "text" : "пока"
     } ],
-    "classificationRules" : {
-      "refs" : [ ]
-    },
     "priority" : 0
   }, {
+    "id" : 5290720,
     "path" : "/привет",
     "enabled" : true,
     "shared" : false,
     "phrases" : [ {
       "text" : "привет"
     } ],
-    "classificationRules" : {
-      "refs" : [ ]
-    },
     "priority" : 0
   } ],
   "entities" : [ ],
@@ -94,7 +83,7 @@
     "enabled" : false
   }, {
     "name" : "duckling.number",
-    "version" : "v2",
+    "version" : "v1",
     "enabled" : true
   }, {
     "name" : "duckling.ordinal",
@@ -110,7 +99,7 @@
     "enabled" : false
   }, {
     "name" : "duckling.time",
-    "version" : "v2",
+    "version" : "v1",
     "enabled" : true
   }, {
     "name" : "duckling.date",
@@ -122,19 +111,19 @@
     "enabled" : false
   }, {
     "name" : "duckling.duration",
-    "version" : "v2",
+    "version" : "v1",
     "enabled" : true
   }, {
     "name" : "duckling.phone-number",
-    "version" : "v2",
+    "version" : "v1",
     "enabled" : true
   }, {
     "name" : "duckling.email",
-    "version" : "v2",
+    "version" : "v1",
     "enabled" : true
   }, {
     "name" : "duckling.url",
-    "version" : "v2",
+    "version" : "v1",
     "enabled" : true
   }, {
     "name" : "duckling.interval",
@@ -149,7 +138,5 @@
   }, {
     "name" : "zb.number",
     "enabled" : false
-  } ],
-  "faq" : [ ],
-  "skills" : [ ]
+  } ]
 }
