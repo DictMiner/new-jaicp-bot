@@ -1,8 +1,8 @@
 {
   "project" : {
-    "id" : "botforclass-249847117-XAl",
-    "name" : "botforclass-249847117-XAl",
-    "folder" : "/jaicp"
+    "id" : "test_os-1000105668-ELF",
+    "name" : "test_os-1000105668-ELF",
+    "folder" : "/platform"
   },
   "settings" : {
     "language" : "ru",
@@ -12,25 +12,35 @@
     "extendedSettings" : {
       "useShared" : false
     },
-    "shared" : false
+    "shared" : false,
+    "validation" : {
+      "phraseValidationEnabled" : false,
+      "answerValidationEnabled" : false,
+      "phraseValidationThreshold" : 0.5,
+      "answerValidationThreshold" : 0.8
+    }
   },
   "intents" : [ {
-    "id" : 5290719,
     "path" : "/пока",
     "enabled" : true,
     "shared" : false,
     "phrases" : [ {
       "text" : "пока"
     } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
     "priority" : 0
   }, {
-    "id" : 5290720,
     "path" : "/привет",
     "enabled" : true,
     "shared" : false,
     "phrases" : [ {
       "text" : "привет"
     } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
     "priority" : 0
   } ],
   "entities" : [ ],
@@ -138,5 +148,7 @@
   }, {
     "name" : "zb.number",
     "enabled" : false
-  } ]
+  } ],
+  "faq" : [ ],
+  "skills" : [ ]
 }
