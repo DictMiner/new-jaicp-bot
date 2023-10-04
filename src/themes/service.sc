@@ -9,6 +9,10 @@ theme: /Service
         state: Accepted
             q: * (да/дава*/хорошо) *
             a: Отлично!
+            if: $client.phone
+                go!: /Phone/Confirm
+            else:
+                go!: /Phone/Ask
             
         state: Rejected
             q: * (нет/не) *

@@ -42,13 +42,88 @@
       "refs" : [ ]
     },
     "priority" : 0
+  }, {
+    "path" : "/luggage",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "сколько килограмм можно провести в багаже"
+    }, {
+      "text" : "сколько может весить багаж"
+    }, {
+      "text" : "какая норма перевоза багажа"
+    }, {
+      "text" : "норма багажа в @tariff"
+    }, {
+      "text" : "багаж в @tariff"
+    }, {
+      "text" : "сколько в кг можно провести в @tariff"
+    }, {
+      "text" : "какой багаж разрешен в @tariff"
+    }, {
+      "text" : "какая в @tariff норма провоза багажа"
+    }, {
+      "text" : "разрешенный багаж в @tariff"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ "* норм* [провоза] багаж* *" ],
+    "slots" : [ {
+      "name" : "tariff",
+      "entity" : "tariff",
+      "required" : true,
+      "prompts" : [ "Какой у вас класс обслуживания?", "Какой у вас тариф?" ]
+    } ],
+    "priority" : 0
+  }, {
+    "path" : "/geo",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "@mystem.geo"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "slots" : [ {
+      "name" : "mystem.geo",
+      "entity" : "mystem.geo",
+      "required" : true,
+      "prompts" : [ "Введите город.", "В каком городе вы хотели бы узнать прогноз погоды?" ]
+    } ],
+    "priority" : 0
   } ],
-  "entities" : [ ],
-  "enabledSystemEntities" : [ "duckling.number", "duckling.time", "duckling.duration", "duckling.phone-number", "duckling.email", "duckling.url" ],
+  "entities" : [ {
+    "entity" : {
+      "name" : "tariff",
+      "enabled" : true,
+      "shared" : false,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : true,
+      "noMorph" : false,
+      "phoneticSearch" : false,
+      "fuzzySearch" : false,
+      "client" : false,
+      "hidden" : false
+    },
+    "records" : [ {
+      "type" : "synonyms",
+      "rule" : [ "бизнес", "бизнес-класс", "business", "бизнес класс" ],
+      "value" : "{\"name\":\"Бизнес\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "эконом", "эконом-класс", "эконом класс", "economy" ],
+      "value" : "{\"name\":\"Эконом\"}"
+    } ]
+  } ],
+  "enabledSystemEntities" : [ "mystem.geo", "duckling.number", "duckling.time", "duckling.duration", "duckling.phone-number", "duckling.email", "duckling.url" ],
   "spellerDictionary" : [ ],
   "systemEntities" : [ {
     "name" : "mystem.geo",
-    "enabled" : false
+    "enabled" : true
   }, {
     "name" : "mystem.persn",
     "enabled" : false

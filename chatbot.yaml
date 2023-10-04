@@ -11,3 +11,11 @@ sts:
 
 caila:
     noMatchThreshold: 0.2
+    
+injector:
+    botName: botOne
+    weatherApiKey: '54ef71e3ee4bdfcea210812fdc131163'
+    # slotfilling:
+    #     maxSlotRetries: 2
+    #     stopOnAnyIntent: false
+    #     stopOnAnyIntentThreshold: 0.2
