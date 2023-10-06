@@ -5,6 +5,7 @@ require: themes/discount.sc
 require: themes/city.sc
 require: themes/luggage.sc
 require: themes/weather.sc
+require: themes/satisfaction.sc
 
 require: scripts/functions.js
 

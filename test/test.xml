@@ -1,2 +1,61 @@
 <test>
-</test>    
+    
+    <test-case>
+        <q>/start</q>
+        <a state="/Welcome"/>
+        <a state="/Welcome"/>
+        <a state="/Service/SuggestHelp"/>
+        <q>давай</q>
+        <a state="/Service/SuggestHelp/Accepted"/>
+        <a state="/Phone/Ask"/>
+        <q>79000000000</q>
+        <a state="/Phone/Confirm"/>
+        <q>нет</q>
+        <a state="/Phone/Ask"/>
+        
+    </test-case>
+    
+    
+    <test-case>
+        <q>/start</q>
+        <responseData field="replies">
+            [
+                {"type":"text","text":"Здравствуйте!","state":"/Welcome"},
+                {"type":"text","text":"меня зовут Botone","state":"/Welcome"},
+                {"type":"text","text":"Давайте я помогу вам купить билет на самолет, хорошо?","state":"/Service/SuggestHelp"},
+                {"type":"buttons","buttons":[{"text":"Да"},{"text":"Нет"}],"state":"/Service/SuggestHelp"}
+            ]
+        </responseData>
+        <a>Здравствуйте!</a>
+        <a>меня зовут Botone</a>
+        <a>Давайте я помогу вам купить билет на самолет, хорошо?</a>
+        <q>давай</q>
+        <a>Отлично!</a>
+        <a>Для продолжения напишите, пожайлуста, ваш номер телефона 79*********.</a>
+        <q>79000000000</q>
+        <a>Ваш номер 79000000000, верно?</a>
+        <dateTime>2023-10-06 13:23:55</dateTime>
+        <q>Да</q>
+        <a>Хорошо</a>
+        <a>Хочу отметить, что вам крупно повезло! Сегодня (06.10) дейстует акция!</a>
+        <a>Купите сегодня и получите скидку 10%</a>
+        <a>Пожайлуста, назовите город отправления</a>
+        <q>Париж</q>
+        <a>Итак, город отправления Париж</a>
+        <a>Пожайлуста, назовите город прибытия</a>
+        <q>Сочи</q>
+        <a>Итак, город прибытия Сочи</a>
+        <a state="/Weather/Current"/>
+        <a>Мы очень хотим сделать нашего бота лучше! Расскажите нам, Вы были довольны нашим сервисом?</a>
+        
+    </test-case>
+    
+    <!--<test-case id="weather" integration="true">-->
+    <!--    <state>/City/Arrival</state>-->
+    <!--    <q>Сочи</q>-->
+    <!--    <a>Итак, город прибытия Сочи</a>-->
+    <!--    <a state="/Weather/Current"/>-->
+    <!--</test-case>-->
+    
+    
+</test>

@@ -8,3 +8,4 @@ theme: /Weather
             a: В городе {{ capitalize($nlp.inflect($session.arrivalCity.name, "loct")) }} сейчас {{ $temp.currentWeather.desc }}, {{ Math.round($temp.currentWeather.temp) }}*C }}
         else:
             a: Погоду по региону не найдена
+        go!: /Satisfaction/SatisfiedClient
