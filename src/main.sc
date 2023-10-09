@@ -6,8 +6,12 @@ require: themes/city.sc
 require: themes/luggage.sc
 require: themes/weather.sc
 require: themes/satisfaction.sc
+require: themes/updates.sc
 
 require: scripts/functions.js
+
+require: common.js
+    module = sys.zb-common
 
 require: dicts/discounts.yaml
     var = discountInfo
