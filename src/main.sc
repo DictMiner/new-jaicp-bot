@@ -7,6 +7,7 @@ require: themes/luggage.sc
 require: themes/weather.sc
 require: themes/satisfaction.sc
 require: themes/updates.sc
+require: themes/orderInfo.sc
 
 require: scripts/functions.js
 
@@ -19,14 +20,19 @@ require: dicts/discounts.yaml
 require: slotfilling/slotFilling.sc
     module = sys.zb-common
 
-
 require: city/cities-ru.csv
     module = sys.zb-common
     name = Cities
     var = $Cities
-    
+
+require: number/number.sc
+    module = sys.zb-common
+
+require: number/numberConverter.js
+    module = sys.zb-common
+
 init:
-    $global.$converters = {};
+    $global.$converters = $global.$converters || {};
     $global.$converters.CityConverter = function CityConverter($parseTree){
         return $Cities[$parseTree.Cities[0].value].value;
     };
@@ -62,7 +68,8 @@ theme: /
         #         imageUri: "https://proprikol.ru/wp-content/uploads/2020/12/samolety-krasivye-kartinki-12.jpg",
         #         text: "Самолет"
         #     });
-        go!: /Service/SuggestHelp
+        # go!: /Service/SuggestHelp
+        go!: /OrderInfo/OrderRequest
 
     state: NoMatch || noContext = true
         event!: noMatch

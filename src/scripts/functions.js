@@ -18,3 +18,23 @@ function getCurrentWeather(lat, lon){
     weather.desc = response.data.weather[0].description;
     return weather;
 }
+
+function getOrderInfo(orderId){
+    var xconnect = $jsapi.context().injector.xconnect;
+    var xconnect_value = $jsapi.context().injector.xconnect_value;
+    var response = $http.get("https://connect.travadm.org/api/jaicp/v1/customerorder/byid?order_id=${orderId}", {
+        headers: {
+            "X-CONNECT-TOKEN": "1ZvFPQ8AwivbOxF6GLus"
+        },
+        query: {
+            orderId: orderId
+        },
+        timeout: 10000
+    });
+    if (!response.isOk || !response.data) {
+        $reactions.answer(response.status);
+        return false;
+    }
+    // var orderInfo = response.data;
+    return response.data;
+}

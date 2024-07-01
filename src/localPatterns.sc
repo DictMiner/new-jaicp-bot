@@ -3,6 +3,5 @@ patterns:
     $bot = (бот|робот*|чатбот|чат бот|чат-бот|чатик|~чат)
     $hi = * (здравствуй*/привет*) *
     $phone = $regexp<79\d{9}>
-    
-    # $City = $entity<Cities>
+    $number = $regexp<\d+> || converter = $converters.numberConverterDigit
     $City = $entity<Cities> || converter = $converters.CityConverter
