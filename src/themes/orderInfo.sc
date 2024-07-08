@@ -6,13 +6,13 @@ theme: /OrderInfo
             "1007379419"
             
         state: Get
-            q: * $number *
+            q: * $number2 * 
             script:
                 # log('\n parseTree.City: \n' + toPrettyString($parseTree.City));
                 # $reactions.answer(toPrettyString($City))
                 # $reactions.answer(toPrettyString($Cities[6586]['value']['name']))
                 # $reactions.answer(Cities[6863])
-                $session.orderInfo = $parseTree._number;
+                $session.orderInfo = $parseTree._number2;
             a: Итак, ордер {{ $session.orderInfo }}
             go!: /OrderInfo/Info
 
